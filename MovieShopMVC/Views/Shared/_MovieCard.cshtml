@@ -1,0 +1,13 @@
+﻿@model ApplicationCore.Models.MovieCard
+
+<!-- model（小写）声明模型类型 -->
+<!-- Model（大写）是使用模型对象 -->
+<div class="card mb-4">
+	<!-- 卡片下方有外边距（margin-bottom）为4 -->
+	<!-- ASP.NET Core Tag Helper 语法，生成一个链接 -->
+	<a asp-controller="Movies" asp-action="Details" asp-route-id="@Model.Id">
+		<!-- alt：备用文字（图片无法加载时显示电影名） -->
+		<!-- class="img-fluid"：Bootstrap 响应式图片类，能让图片自动缩放以适应列宽 -->
+		<img src="@Model.PosterUrl" alt="@Model.Title" class="img-fluid" />
+	</a>
+</div>
