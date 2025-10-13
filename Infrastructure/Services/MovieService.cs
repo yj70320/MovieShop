@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -68,6 +69,14 @@ namespace Infrastructure.Services
                 movieDetails.Genres.Add(new GenreModel { Id = genre.GenreId, Name = genre.Genre.Name });
             }
             return movieDetails;
+        }
+
+        public async Task<PagedResultSet<MovieCard>> GetMoviesByGenrePagination(int genreId, int pageSize = 30, int pageNumber = 1)
+        {
+            var pagedMovies = await _movieRepository.GetMoviesByGenres(genreId, pageSize, pageNumber);
+            var movieCards = new List<MovieCard>();
+            movieCards.AddRange(pagedMovies.Data.Select(m => new MovieCard { Id = m.Id, Title = m.Title, PosterUrl = m.PosterUrl }));
+            return new PagedResultSet<MovieCard>(movieCards, pageNumber, pagedMovies.PageSize, pagedMovies.Count);
         }
     }
 }

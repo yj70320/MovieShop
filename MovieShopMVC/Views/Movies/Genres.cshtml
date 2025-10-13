@@ -1,0 +1,57 @@
+﻿@model ApplicationCore.Models.PagedResultSet<ApplicationCore.Models.MovieCard>
+
+@{
+	int totalPage = Model.TotalPages;
+	int curIndex = Model.PageIndex;
+	bool hasPrev = Model.HasPreviousPage;
+	bool hasNext = Model.HasNextPage;
+}
+
+
+<!-- Bootstrap 结构：Container → Row → Column -->
+<div class="rounded">              <!-- 给最外层容器加上圆角效果 -->
+	<div class="container-fluid">  <!-- 宽度 100%，适应所有屏幕大小 -->
+		<div class="row">          <!-- 网格行，里面放若干列（col-*）-->
+			<!-- 循环显示每个电影卡片 -->
+			@foreach (var movie in Model.Data)
+			{
+				<div class="col-6 col-sm-4 col-md-3 col-xl-2">
+					<!-- 调用 MovieCard.cshtml -->
+					<partial name="_MovieCard" model="movie" />
+				</div>
+			}
+		</div>
+	</div>
+</div>
+
+<nav aria-label="Page navigation example">
+	<ul class="pagination">
+		<!-- 首页逻辑 -->
+		@if (hasPrev) 
+		{
+			<li class="page-item"><a class="page-link" asp-route-pageNumber="@(Math.Max(1, curIndex - 1))">Previous</a></li>
+		}
+		else
+		{
+			<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+		}
+
+		<!-- 分页循环：前一页，当前页，后一页 -->
+		@for (int i = Math.Max(1, curIndex - 1); i <= Math.Min(curIndex + 1, totalPage); i++)
+		{
+			<li class="page-item">
+				<a class="page-link" asp-route-pageNumber="@i">@i</a>
+			</li>
+		}
+
+		<!-- 尾页逻辑 -->
+		@if (hasNext)
+		{
+			<li class="page-item"><a class="page-link" asp-route-pageNumber="@(Math.Min(curIndex + 1, totalPage))">Next</a></li>
+		}
+		else
+		{
+			<li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+		}
+	</ul>
+</nav>

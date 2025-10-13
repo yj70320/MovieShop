@@ -10,6 +10,7 @@ namespace MovieShopMVC.Controllers
         {
             _movieService = movieService;
         }
+
         // async: 告诉编译器这个方法用异步方式执行，这个方法很耗时间，先去做别的事情
         // 异步方法，返回值用 Task<> 包围。e.g. 返回 void => Task, 返回 int => Task<int>
         public async Task<IActionResult> Details(int id) // http://movieshop.com/movies/details
@@ -18,6 +19,12 @@ namespace MovieShopMVC.Controllers
             //var movieDetails = _movieService.GetMovieDetails(id);
             var movieDetails = await _movieService.GetMovieDetails(id);
             return View(movieDetails);
+        }
+
+        // http://movieshop.com/movies/genres/1?pageSize=30&pageNumber=2
+        public async Task<IActionResult> Genres(int id, int pageSize = 30, int pageNumber = 1) {
+            var pagedMovies = await _movieService.GetMoviesByGenrePagination(id, pageSize, pageNumber);
+            return View(pagedMovies);
         }
     }
 }

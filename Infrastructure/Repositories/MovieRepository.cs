@@ -1,5 +1,6 @@
 ﻿using ApplicationCore.Contracts.Repositories;
 using ApplicationCore.Entities;
+using ApplicationCore.Models;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -49,6 +50,24 @@ namespace Infrastructure.Repositories
                                                           //.Select(r => r.Rating).AsEnumerable().DefaultIfEmpty(0).Average();
 
             return movie;
+        }
+
+        public async Task<PagedResultSet<Movie>> GetMoviesByGenres(int genreId, int pageSize = 30, int pageNumber = 1)
+        {
+            var totalMoviesCountByGenre = await _dbContext.MovieGenres
+                .Where(m => m.GenreId == genreId)
+                .CountAsync();
+            if (totalMoviesCountByGenre == 0) throw new Exception("No Movie found for that Genre.");
+            var movies = await _dbContext.MovieGenres
+                .Where(m => m.GenreId == genreId)
+                .Include(m => m.Movie)
+                .OrderBy(m => m.Movie.Id)
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .Select(m => m.Movie)  // 转成 Movie 类型
+                .ToListAsync();
+            PagedResultSet<Movie> pagedMovies = new PagedResultSet<Movie>(movies, pageNumber, pageSize, totalMoviesCountByGenre);
+            return pagedMovies;
         }
     }
 }
