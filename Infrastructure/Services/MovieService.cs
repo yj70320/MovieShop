@@ -18,7 +18,7 @@ namespace Infrastructure.Services
         {
             _movieRepository = movieRepository;
         }
-        public List<MovieCard> Get30HighestGrossingMovies()
+        public async Task<List<MovieCard>> Get30HighestGrossingMovies()
         {
             //var movies = new List<MovieCard>
             //{
@@ -28,7 +28,7 @@ namespace Infrastructure.Services
             //    new MovieCard { Title = "Deadpool", Id = 4, PosterUrl = "https://image.tmdb.org/t/p/w342/yGSxMiF0cYuAiyuve5DA6bnWbkm.jpg" },
             //    new MovieCard { Title = "The Avengers", Id = 5, PosterUrl = "https://image.tmdb.org/t/p/w342/RvYMy2wcKCBAz24UyPD7xwmjaTn.jpg" }
             //};
-            var movies = _movieRepository.Get30HighestGrossingMovie();
+            var movies = await _movieRepository.Get30HighestGrossingMovie();
             var movieCards = new List<MovieCard>();
             foreach (var movie in movies) { 
                 movieCards.Add(new MovieCard { Id = movie.Id , Title = movie.Title, PosterUrl = movie.PosterUrl});
@@ -36,9 +36,9 @@ namespace Infrastructure.Services
             return movieCards;
         }
 
-        public MovieDetailModel GetMovieDetails(int id)
+        public async Task<MovieDetailModel> GetMovieDetails(int id)
         {
-            var movie = _movieRepository.GetById(id);
+            var movie = await _movieRepository.GetById(id);
             var movieDetails = new MovieDetailModel
             {
                 Id = movie.Id,

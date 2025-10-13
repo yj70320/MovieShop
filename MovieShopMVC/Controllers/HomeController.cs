@@ -22,7 +22,7 @@ namespace MovieShopMVC.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             //ViewBag.Title = "MovieShop Home Page Title";
             //ViewBag.description = new List<string>() {"abc", "def"};
@@ -37,7 +37,7 @@ namespace MovieShopMVC.Controllers
             //        new MovieCard { Title = "The Avengers", Id = 5, PosterUrl = "https://image.tmdb.org/t/p/w342/RvYMy2wcKCBAz24UyPD7xwmjaTn.jpg" }
             //    };
             //var movieService = new MovieService();
-            var movies = _movieService.Get30HighestGrossingMovies();
+            var movies = await _movieService.Get30HighestGrossingMovies();
             return View(movies);
         }
 

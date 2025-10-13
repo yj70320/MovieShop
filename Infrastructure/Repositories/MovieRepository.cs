@@ -16,10 +16,10 @@ namespace Infrastructure.Repositories
         {
         }
 
-        public IEnumerable<Movie> Get30HighestGrossingMovie()
+        public async Task<IEnumerable<Movie>> Get30HighestGrossingMovie()
         {
             // select top 30 * from Movie order by Revenue desc
-            var movies = _dbContext.Movies.OrderByDescending(m => m.Revenue).Take(30).ToList();
+            var movies = await _dbContext.Movies.OrderByDescending(m => m.Revenue).Take(30).ToListAsync();  // ToList() 同步方法
             return movies;
         }
 
@@ -32,21 +32,22 @@ namespace Infrastructure.Repositories
                 .Include(m => m.GenresOfMovie).ThenInclude(mg => mg.Genre).Include(m => m.Trailers).Take(30);
             return movies;
         }
-        public override Movie GetById(int id)
+        public async override Task<Movie> GetById(int id)
         {
             //_dbContext.Movies.FirstOrDefault(m => m.Id == id);
             // 连接表格加到 movie 中：Trailers, cast
             // Include: 加载直接关联的导航属性
             // ThenInclude: 加载 间接关联（嵌套层级）的导航属性
-            var movie = _dbContext.Movies
+            var movie = await _dbContext.Movies
                 .Include(m => m.GenresOfMovie).ThenInclude(mg => mg.Genre)
-                .Include(m => m.Trailers)
                 .Include(m => m.CastsOfMovie).ThenInclude(mc => mc.Cast)
-                .FirstOrDefault(m => m.Id == id);
+                .Include(m => m.Trailers)
+                .FirstOrDefaultAsync(m => m.Id == id);    // FirstOrDefault() 是同步方法，加上 Async 变成异步方法，最面前要加 await
             // 加入 average rating
-            var avgRating = _dbContext.Reviews.Where(r => r.MovieId == id)
-                .Select(r => r.Rating).AsEnumerable().DefaultIfEmpty(0).Average();
-            movie.Rating = avgRating;
+            movie.Rating = await _dbContext.Reviews.Where(r => r.MovieId == id)
+                .AverageAsync(r => r.Rating);             // Average() 是同步方法，加上 Async 变成异步方法，最面前要加 await
+                                                          //.Select(r => r.Rating).AsEnumerable().DefaultIfEmpty(0).Average();
+
             return movie;
         }
     }

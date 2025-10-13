@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\YJ\\Desktop\\HW_done\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {}
+    "C:\\Users\\YJ\\Desktop\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\YJ\\Desktop\\HW_done\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {
+    "C:\\Users\\YJ\\Desktop\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\YJ\\Desktop\\HW_done\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
+        "projectUniqueName": "C:\\Users\\YJ\\Desktop\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
         "projectName": "ApplicationCore",
-        "projectPath": "C:\\Users\\YJ\\Desktop\\HW_done\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
+        "projectPath": "C:\\Users\\YJ\\Desktop\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
         "packagesPath": "C:\\Users\\YJ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\YJ\\Desktop\\HW_done\\MovieShop\\ApplicationCore\\obj\\",
+        "outputPath": "C:\\Users\\YJ\\Desktop\\MovieShop\\ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
