@@ -1,0 +1,31 @@
+﻿@using MovieShopMVC.Services
+@inject ICurrentUser currentUser
+
+<!-- 首先检查是否登录，没有登录的话显示 login / register 按钮 -->
+@if (!currentUser.IsAuthenticated)
+{
+    <div class="d-flex justify-content-end gap-2">
+        <a class="btn btn-outline-primary" asp-controller="Account" asp-action="Login">Login</a>
+        <a class="btn btn-outline-primary" asp-controller="Account" asp-action="Register">Register</a>
+    </div>
+}
+else
+{
+    <!-- 已经登录就显示显示带下拉菜单的 FullName -->
+    <!-- 下拉菜单包括：购买记录 Purchase -> Library，收藏 Favorites，账户信息 Profile，登出 Logout-->
+    <div class="text-end">
+        <ul class="nav">
+            <li class="nav-item dropdown text-capitalize">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    @currentUser.FullName
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" asp-controller="User" asp-action="Purchases">Library</a></li>
+                    <li><a class="dropdown-item" asp-controller="User" asp-action="Favorites">Favorites</a></li>
+                    <li><a class="dropdown-item" asp-controller="Account" asp-action="Profile">Account</a></li>
+                    <li><a class="dropdown-item" asp-controller="Account" asp-action="Logout">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+}

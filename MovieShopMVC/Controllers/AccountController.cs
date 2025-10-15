@@ -33,8 +33,9 @@ namespace MovieShopMVC.Controllers
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.GivenName, user.FirstName),
                 new Claim(ClaimTypes.Surname, user.LastName),
+                //new Claim(ClaimTypes.Name, $"{user.FirstName} {user.LastName}".Trim()),
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.DateOfBirth, user.DateOfBirth.ToShortDateString()),
+                new Claim(ClaimTypes.DateOfBirth, user.DateOfBirth.ToShortDateString())
                 // new Claim("Language", "English")  // DIY Claim
             };
 
@@ -49,11 +50,28 @@ namespace MovieShopMVC.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Register() { return View(); }
+        public async Task<IActionResult> Register() 
+        { 
+            return View(); 
+        }
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterModel model) {
+        public async Task<IActionResult> Register(RegisterModel model) 
+        {
+            // 前端验证可以被绕过，需要在后端 (RegisterModel.cs, YearValidationAttrbutes.cs) 同样进行验证
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             var user = await _accountService.RegisterUser(model);
             return RedirectToAction("Login");
+        }
+        [HttpGet]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+
+            // 登出后跳转回主页
+            return LocalRedirect("~/");
         }
     }
 }
