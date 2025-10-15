@@ -39,9 +39,34 @@ namespace Infrastructure.Services
             return true;
         }
 
-        public Task<bool> ValidateUser(string email, string password)
+        public async Task<UserInfoModel> ValidateUser(string email, string password)
         {
-            throw new NotImplementedException();
+            // 用户登录，查看email是否已经注册，在数据库中
+            var user = await _userRepository.GetUserByEmail(email);
+            if (user == null)  // 数据库中找不到 email
+            {
+                throw new Exception("Email does not exist.");
+            }
+
+            // 找到 email，开始比较密码是否一致
+            var hasedPassword = GetHashedPassword(password, user.Salt);
+            if (hasedPassword.Equals(user.HashedPassword))
+            {
+                // 创建 cookie
+                var userInfo = new UserInfoModel
+                {
+                    Email = user.Email,
+                    Id = user.Id,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    DateOfBirth = user.DateOfBirth.GetValueOrDefault()
+                };
+                return userInfo;
+            }
+            else
+            {
+                throw new Exception("Invalid credentials: Email & Pasword don't match.");
+            }
         }
 
         // 生成 salt
