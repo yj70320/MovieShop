@@ -44,6 +44,8 @@ namespace Infrastructure.Repositories
                 .Include(m => m.CastsOfMovie).ThenInclude(mc => mc.Cast)
                 .Include(m => m.Trailers)
                 .FirstOrDefaultAsync(m => m.Id == id);    // FirstOrDefault() 是同步方法，加上 Async 变成异步方法，最面前要加 await
+            if (movie == null) return null;
+
             // 加入 average rating
             movie.Rating = await _dbContext.Reviews.Where(r => r.MovieId == id)
                 .AverageAsync(r => r.Rating);             // Average() 是同步方法，加上 Async 变成异步方法，最面前要加 await
