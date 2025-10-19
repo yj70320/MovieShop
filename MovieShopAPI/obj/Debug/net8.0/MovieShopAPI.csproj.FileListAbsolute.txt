@@ -94,3 +94,4 @@ C:\Users\YJ\Desktop\MovieShop\MovieShopAPI\obj\Debug\net8.0\refint\MovieShopAPI.
 C:\Users\YJ\Desktop\MovieShop\MovieShopAPI\obj\Debug\net8.0\MovieShopAPI.pdb
 C:\Users\YJ\Desktop\MovieShop\MovieShopAPI\obj\Debug\net8.0\MovieShopAPI.genruntimeconfig.cache
 C:\Users\YJ\Desktop\MovieShop\MovieShopAPI\obj\Debug\net8.0\ref\MovieShopAPI.dll
+C:\Users\YJ\Desktop\MovieShop\MovieShopAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

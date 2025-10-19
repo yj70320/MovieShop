@@ -101,6 +101,18 @@
           }
         }
       }
+    },
+    "/api/User/purchases": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {

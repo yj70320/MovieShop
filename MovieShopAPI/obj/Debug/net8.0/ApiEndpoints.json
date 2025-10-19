@@ -56,5 +56,15 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieShopAPI.Controllers.UserController",
+    "Method": "Purchases",
+    "RelativePath": "api/User/purchases",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

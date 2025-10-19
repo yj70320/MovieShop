@@ -21,3 +21,4 @@ C:\Users\YJ\Desktop\MovieShop\ApplicationCore\obj\Debug\net8.0\ApplicationCore.d
 C:\Users\YJ\Desktop\MovieShop\ApplicationCore\obj\Debug\net8.0\refint\ApplicationCore.dll
 C:\Users\YJ\Desktop\MovieShop\ApplicationCore\obj\Debug\net8.0\ApplicationCore.pdb
 C:\Users\YJ\Desktop\MovieShop\ApplicationCore\obj\Debug\net8.0\ref\ApplicationCore.dll
+C:\Users\YJ\Desktop\MovieShop\ApplicationCore\obj\Debug\net8.0\ApplicationCore.csproj.AssemblyReference.cache
