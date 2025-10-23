@@ -5,6 +5,7 @@ using Infrastructure.Repositories;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using MovieShopMVC.Middlewares;
 using MovieShopMVC.Services;
 
 // 注册 Service
@@ -47,8 +48,13 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+else
+{
+    // 使用中间件来捕获异常
+    app.UseMovieShopExceptionMiddleware();
+}
 
-app.UseHttpsRedirection();
+    app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();

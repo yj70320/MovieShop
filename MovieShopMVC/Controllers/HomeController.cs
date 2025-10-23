@@ -24,6 +24,9 @@ namespace MovieShopMVC.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
+            int x = 1;
+            int y = 0;
+            int z = x / y;
             //ViewBag.Title = "MovieShop Home Page Title";
             //ViewBag.description = new List<string>() {"abc", "def"};
             //ViewData["Title"] = "MovieShop Home Page Title";
@@ -50,6 +53,10 @@ namespace MovieShopMVC.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
+            // ?. 表示“如果 Activity.Current 不为 null，就取它的 Id”，否则返回 null
+            // ?? HttpContext.TraceIdentifier：如果上面的值是 null，就用当前 HTTP 请求的唯一标识符（TraceIdentifier）代替。
+            //                                保证了无论是否启用了诊断系统，都能有一个唯一的请求编号。
+            // Activity.Current?.Id ?? HttpContext.TraceIdentifier：有 tracing 就用 tracing ID，没 tracing 就用请求 ID。
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }

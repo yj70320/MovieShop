@@ -5,6 +5,7 @@ using Infrastructure.Repositories;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileSystemGlobbing.Internal.Patterns;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -43,18 +44,42 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 );
 
 var app = builder.Build();
+Console.WriteLine($"ENV={app.Environment.EnvironmentName}");
 
-// Configure the HTTP request pipeline.
+//// 探针，确认跑的就是 MVC 的 Program.cs
+//app.MapGet("/env", () => Results.Text($"ENV={app.Environment.EnvironmentName}"));
+//app.MapGet("/ping", () => Results.Text("MovieShopMVC Program.cs"));
+
+//app.Use(async (ctx, next) =>
+//{
+//    try { await next(); }
+//    catch
+//    {
+//        ctx.Response.Clear();
+//        ctx.Response.Redirect("/Home/Error");
+//    }
+//});
+// Configure the HTTP request pipeline.F
 if (app.Environment.IsDevelopment())
 {
+    // 在 生产环境（Production） 或 测试环境（Staging） 才会启用 Swagger
+    // 在 开发环境（Development） 不启用
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
 
+app.UseStaticFiles();
+
+app.UseRouting();
+
 app.UseAuthorization();
 
-app.MapControllers();
+//app.MapControllers();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+    );
 
 app.Run();
