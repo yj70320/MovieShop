@@ -68,6 +68,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// 加入白名单，具体在 appsettings.json
+app.UseCors(policy =>
+{
+    policy.WithOrigins(builder.Configuration["spaUrl"])
+          .AllowAnyMethod()
+          .AllowAnyHeader()
+          .AllowCredentials();
+});
+
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();

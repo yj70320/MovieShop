@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\YJ\\Desktop\\MovieShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|c:\\users\\yj\\desktop\\movieshop\\movieshopmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|solutionrelative:movieshopmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|c:\\users\\yj\\desktop\\movieshop\\movieshopmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|solutionrelative:movieshopmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{848DD0D4-F54B-4DFC-A66A-F03B1B789777}|MovieShopAPI\\MovieShopAPI.csproj|c:\\users\\yj\\desktop\\movieshop\\movieshopapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{848DD0D4-F54B-4DFC-A66A-F03B1B789777}|MovieShopAPI\\MovieShopAPI.csproj|solutionrelative:movieshopapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{848DD0D4-F54B-4DFC-A66A-F03B1B789777}|MovieShopAPI\\MovieShopAPI.csproj|c:\\users\\yj\\desktop\\movieshop\\movieshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{848DD0D4-F54B-4DFC-A66A-F03B1B789777}|MovieShopAPI\\MovieShopAPI.csproj|solutionrelative:movieshopapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|c:\\users\\yj\\desktop\\movieshop\\movieshopmvc\\middlewares\\movieshopexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +62,44 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "MovieShopMVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "MovieShopMVC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-26T03:32:08.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopAPI\\Program.cs",
+              "RelativeDocumentMoniker": "MovieShopAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopAPI\\Program.cs",
+              "RelativeToolTip": "MovieShopAPI\\Program.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAYwEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T02:12:45.154Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "MovieShopAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopAPI\\appsettings.json",
+              "RelativeToolTip": "MovieShopAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-26T02:12:47.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MovieShopExceptionMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Middlewares\\MovieShopExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "MovieShopMVC\\Middlewares\\MovieShopExceptionMiddleware.cs",
@@ -62,12 +107,11 @@
               "RelativeToolTip": "MovieShopMVC\\Middlewares\\MovieShopExceptionMiddleware.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAhwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T00:34:13.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T00:34:13.917Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "MovieShopMVC\\Controllers\\HomeController.cs",
@@ -75,21 +119,7 @@
               "RelativeToolTip": "MovieShopMVC\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T23:42:55.408Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Program.cs",
-              "RelativeDocumentMoniker": "MovieShopMVC\\Program.cs",
-              "ToolTip": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Program.cs",
-              "RelativeToolTip": "MovieShopMVC\\Program.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAADQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T23:42:50.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T23:42:55.408Z"
             }
           ]
         }
