@@ -41,6 +41,10 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 var app = builder.Build();
 
+//// environment: development
+//app.UseDeveloperExceptionPage();
+
+// environment: production
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -52,9 +56,10 @@ else
 {
     // 使用中间件来捕获异常
     app.UseMovieShopExceptionMiddleware();
+    app.UseMiddleware<MovieShopMVC.Middlewares.LoggingMiddleware>();
 }
 
-    app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();

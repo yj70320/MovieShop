@@ -24,9 +24,13 @@ namespace MovieShopMVC.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            int x = 1;
-            int y = 0;
-            int z = x / y;
+            // development / production ª∑æ≥¥ÌŒÛ≤‚ ‘
+            //int x = 1;
+            //int y = 0;
+            //int z = x / y;
+            throw new Exception("Test error for logging middleware");
+
+
             //ViewBag.Title = "MovieShop Home Page Title";
             //ViewBag.description = new List<string>() {"abc", "def"};
             //ViewData["Title"] = "MovieShop Home Page Title";
