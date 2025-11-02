@@ -43,6 +43,7 @@ namespace MovieShopMVC.Middlewares
                 Directory.CreateDirectory(logsDir);
                 var filePath = Path.Combine(logsDir, $"errors-{DateTime.UtcNow:yyyyMMdd}.log");
                 var text =
+                    // UtcNow：格林尼治时间，本地时间可以用 Now
                     $"[{DateTime.UtcNow:yyyy-MM-dd HH:mm:ss}] {exceptionDetails.HttpMethod} {exceptionDetails.Path}\n" +
                     $"{exceptionDetails.ExceptionType}: {exceptionDetails.Message}\n" +
                     $"{exceptionDetails.StackTrace}\n\n";

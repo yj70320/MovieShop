@@ -28,7 +28,7 @@ namespace MovieShopMVC.Controllers
             //int x = 1;
             //int y = 0;
             //int z = x / y;
-            throw new Exception("Test error for logging middleware");
+            //throw new Exception("Test error for logging middleware");
 
 
             //ViewBag.Title = "MovieShop Home Page Title";

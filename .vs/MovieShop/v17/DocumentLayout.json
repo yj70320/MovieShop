@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\YJ\\Desktop\\MovieShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F3451962-D3ED-4B33-9DD6-51ECE15FB108}|ApplicationCore\\ApplicationCore.csproj|c:\\users\\yj\\desktop\\movieshop\\applicationcore\\entities\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3451962-D3ED-4B33-9DD6-51ECE15FB108}|ApplicationCore\\ApplicationCore.csproj|solutionrelative:applicationcore\\entities\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|c:\\users\\yj\\desktop\\movieshop\\movieshopmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|solutionrelative:movieshopmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|c:\\users\\yj\\desktop\\movieshop\\movieshopmvc\\logs\\errors-20251102.log||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|solutionrelative:movieshopmvc\\logs\\errors-20251102.log||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|c:\\users\\yj\\desktop\\movieshop\\movieshopmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|solutionrelative:movieshopmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|c:\\users\\yj\\desktop\\movieshop\\movieshopmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|solutionrelative:movieshopmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|c:\\users\\yj\\desktop\\movieshop\\movieshopmvc\\middlewares\\loggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|solutionrelative:movieshopmvc\\middlewares\\loggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{697279EA-9377-45EC-B57D-4DAA79516BD5}|MovieShopMVC\\MovieShopMVC.csproj|c:\\users\\yj\\desktop\\movieshop\\movieshopmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,46 +62,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Genre.cs",
-              "DocumentMoniker": "C:\\Users\\YJ\\Desktop\\MovieShop\\ApplicationCore\\Entities\\Genre.cs",
-              "RelativeDocumentMoniker": "ApplicationCore\\Entities\\Genre.cs",
-              "ToolTip": "C:\\Users\\YJ\\Desktop\\MovieShop\\ApplicationCore\\Entities\\Genre.cs",
-              "RelativeToolTip": "ApplicationCore\\Entities\\Genre.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T19:18:57.862Z",
+              "DocumentIndex": 1,
+              "Title": "errors-20251102.log",
+              "DocumentMoniker": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Logs\\errors-20251102.log",
+              "RelativeDocumentMoniker": "MovieShopMVC\\Logs\\errors-20251102.log",
+              "ToolTip": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Logs\\errors-20251102.log",
+              "RelativeToolTip": "MovieShopMVC\\Logs\\errors-20251102.log",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-02T03:39:31.687Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Program.cs",
+              "RelativeDocumentMoniker": "MovieShopMVC\\Program.cs",
+              "ToolTip": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Program.cs",
+              "RelativeToolTip": "MovieShopMVC\\Program.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEQAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T03:22:53.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoggingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Middlewares\\LoggingMiddleware.cs",
+              "RelativeDocumentMoniker": "MovieShopMVC\\Middlewares\\LoggingMiddleware.cs",
+              "ToolTip": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Middlewares\\LoggingMiddleware.cs",
+              "RelativeToolTip": "MovieShopMVC\\Middlewares\\LoggingMiddleware.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T03:15:33.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "MovieShopMVC\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Controllers\\HomeController.cs",
               "RelativeToolTip": "MovieShopMVC\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAwwCAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-01T19:14:50.244Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Program.cs",
-              "RelativeDocumentMoniker": "MovieShopMVC\\Program.cs",
-              "ToolTip": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\Program.cs",
-              "RelativeToolTip": "MovieShopMVC\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACwAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T18:54:57.884Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\YJ\\Desktop\\MovieShop\\MovieShopMVC\\appsettings.json",
               "RelativeDocumentMoniker": "MovieShopMVC\\appsettings.json",
@@ -105,8 +122,7 @@
               "RelativeToolTip": "MovieShopMVC\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-01T18:50:09.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-01T18:50:09.997Z"
             }
           ]
         }

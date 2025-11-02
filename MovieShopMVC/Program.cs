@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using MovieShopMVC.Middlewares;
 using MovieShopMVC.Services;
+using Serilog;
 
 // 注册 Service
 var builder = WebApplication.CreateBuilder(args);
@@ -35,8 +36,15 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     options.LoginPath = "/account/login";            // 未登录时访问受保护资源，就跳转到登录页
 });
 
-
-
+// Serilog 错误日志自动生成
+builder.Host.UseSerilog((ctx, lc) =>
+    lc.ReadFrom.Configuration(ctx.Configuration)
+      .Enrich.FromLogContext()
+      .WriteTo.Console()
+      .WriteTo.File("Logs/app-.log", rollingInterval: RollingInterval.Day) // 全部日志
+      .WriteTo.File("Logs/error-.log",
+                    restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Error,
+                    rollingInterval: RollingInterval.Day));                // 仅错误日志
 
 
 var app = builder.Build();
@@ -56,8 +64,10 @@ else
 {
     // 使用中间件来捕获异常
     app.UseMovieShopExceptionMiddleware();
-    app.UseMiddleware<MovieShopMVC.Middlewares.LoggingMiddleware>();
 }
+// 错误日志，保存在 Logs 文件夹里
+//app.UseMiddleware<MovieShopMVC.Middlewares.LoggingMiddleware>(); // 手写的错误日志 middleware
+app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
