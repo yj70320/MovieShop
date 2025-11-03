@@ -1,3 +1,215 @@
-﻿@model ApplicationCore.Models.MovieDetailModel;
+﻿@* @model ApplicationCore.Models.MovieDetailModel;
 <h1>@Model.Title</h1>
-<h3>@Model.Overview</h3>
+<h3>@Model.Overview</h3>  *@
+@model ApplicationCore.Models.MovieDetailModel
+@{
+    ViewData["Title"] = Model?.Title ?? "Movie Details";
+}
+
+<style>
+    /* 只做基础排版，不做重叠横幅 */
+    .poster {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 10px 24px rgba(0,0,0,.18);
+    }
+
+    .movie-intro-bg {
+        background-image: url('@(Model?.BackdropUrl ?? Model?.PosterUrl)');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        border-radius: 1rem;
+        padding: 1.25rem; /* p-4 的等价，防止你没用到 Bootstrap */
+        margin-bottom: 1rem;
+        color: #fff;
+    }
+
+    .movie-intro-bg::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.78));
+        border-radius: 1rem;
+    }
+
+    .movie-intro-bg > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .rating-badge {
+        background: #0d6efd;
+        color: #fff;
+        border-radius: 999px;
+        padding: 4px 10px;
+        font-weight: 700;
+        margin-right: 12px;
+    }
+
+
+    .card-like {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(0,0,0,.08);
+        padding: 16px 18px;
+        margin-bottom: 16px;
+    }
+
+    .facts .row + .row {
+        border-top: 1px dashed #eee;
+    }
+
+    .rating-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: #0d6efd;
+        color: #fff;
+        font-weight: 700;
+        margin-right: 12px;
+    }
+
+    .genre-badge {
+        margin-right: 6px;
+    }
+
+    .action-btn {
+        border: none;
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: #1f6feb;
+        color: #fff;
+        font-weight: 600;
+        margin-right: 8px;
+    }
+
+    .action-btn.secondary {
+        background: #30363d;
+    }
+
+    .cast-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    .cast-item:last-child {
+        border-bottom: none;
+    }
+
+    .cast-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        object-fit: cover;
+        margin-right: 10px;
+        background: #f5f5f5;
+    }
+</style>
+
+<div class="container my-4">
+    <div class="row gx-4">
+        <!-- 左列：海报 + Facts + Trailer -->
+        <div class="col-lg-4">
+            <img class="poster mb-3"
+                 src="@(string.IsNullOrWhiteSpace(Model?.PosterUrl) ? "/images/placeholder-poster.png" : Model.PosterUrl)"
+                 alt="@Model?.Title poster" />
+
+            <div class="card-like">
+                <h5 class="fw-bold mb-3">MOVIE FACTS</h5>
+                <div class="facts">
+                    <div class="row py-2">
+                        <div class="col-6 text-muted">Release Date</div>
+                        <div class="col-6 text-end">@(Model?.ReleaseDate?.ToString("yyyy/MM/dd") ?? "-")</div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-6 text-muted">Run Time</div>
+                        <div class="col-6 text-end">@((Model?.Runtime ?? 0)) min</div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-6 text-muted">Box Office</div>
+                        <div class="col-6 text-end">@((Model?.Revenue ?? 0M).ToString("C0"))</div>
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-6 text-muted">Budget</div>
+                        <div class="col-6 text-end">@((Model?.Budget ?? 0M).ToString("C0"))</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-like">
+                <h5 class="fw-bold mb-3">Trailer</h5>
+                @if (Model?.Trailers != null && Model.Trailers.Any())
+                {
+                    <ul class="list-unstyled mb-0">
+                        @foreach (var t in Model.Trailers)
+                        {
+                            <li class="mb-2">
+                                <span class="me-2">▶</span>
+                                <a href="@t.TrailerUrl" target="_blank" rel="noopener">@t.Name</a>
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <div class="text-muted">No trailer available.</div>
+                }
+            </div>
+        </div>
+
+        <!-- 右列：介绍 + Cast -->
+        <div class="col-lg-8">
+
+            <!-- 介绍块（带背景图和渐变） -->
+            <div class="movie-intro-bg">
+                <h2 class="fw-bold">@Model?.Title</h2>
+
+                <div class="mb-2">
+                    <span class="rating-badge">@((Model?.Rating ?? 0M).ToString("0.0"))</span>
+                    @if (Model?.Genres != null)
+                    {
+                        foreach (var g in Model.Genres)
+                        {
+                            <span class="badge bg-dark me-1">@g.Name</span>
+                        }
+                    }
+                </div>
+
+                <p class="lead">@Model?.Overview</p>
+
+                <div class="mt-2">
+                    <button class="action-btn">Review</button>
+                    <button class="action-btn secondary">BUY @((Model?.Price ?? 9.90M).ToString("$0.00"))</button>
+                </div>
+            </div>
+
+            <!-- Cast 列表 -->
+            <div class="card-like">
+                <h5 class="fw-bold mb-3">CAST</h5>
+                @if (Model?.Casts != null && Model.Casts.Any())
+                {
+                    foreach (var c in Model.Casts)
+                    {
+                        <div class="cast-item">
+                            <img class="cast-avatar"
+                                 src="@(string.IsNullOrWhiteSpace(c.ProfilePath) ? "/images/placeholder-cast.png" : c.ProfilePath)"
+                                 alt="@c.Name" />
+                            <div class="flex-grow-1">
+                                <div class="fw-semibold">@c.Name</div>
+                                <div class="text-muted" style="font-size:.9rem;">@c.Character</div>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="text-muted">No cast information.</div>
+                }
+            </div>
+        </div>
+
+    </div>
+</div>

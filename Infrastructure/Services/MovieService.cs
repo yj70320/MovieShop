@@ -63,15 +63,27 @@ namespace Infrastructure.Services
                 Price = movie.Price,
                 Rating = movie.Rating,
             };
+
             movieDetails.Trailers = new List<TrailerModel>();
             foreach (var trailer in movie.Trailers)
             {
                 movieDetails.Trailers.Add(new TrailerModel { Id = trailer.Id, Name = trailer.Name, TrailerUrl = trailer.TrailerUrl });
             }
+
             movieDetails.Genres = new List<GenreModel>();
             foreach (var genre in movie.GenresOfMovie)
             {
                 movieDetails.Genres.Add(new GenreModel { Id = genre.GenreId, Name = genre.Genre.Name });
+            }
+            if (movie.CastsOfMovie != null && movie.CastsOfMovie.Any())
+            {
+                movieDetails.Casts = movie.CastsOfMovie.Select(mc => new CastModel
+                {
+                    Id = mc.CastId,
+                    Name = mc.Cast.Name,
+                    Character = mc.Character,
+                    ProfilePath = mc.Cast.ProfilePath
+                }).ToList();
             }
             return movieDetails;
         }
