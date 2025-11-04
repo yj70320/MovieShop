@@ -12,13 +12,13 @@ namespace MovieShopMVC.Controllers
         // private readonly：只能在 声明变量 和 构造函数 中赋值，之后不能被修改（保证依赖注入后不可变）
         private readonly ILogger<HomeController> _logger;
         private readonly IMovieService _movieService;
-        private readonly int x = 1;
+        //private readonly int x = 1;
 
         public HomeController(ILogger<HomeController> logger, IMovieService movieService)
         {
             _logger = logger;
             _movieService = movieService;
-            x = 2;
+            //x = 2;
         }
 
         [HttpGet]

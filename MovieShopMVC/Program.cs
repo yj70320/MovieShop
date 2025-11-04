@@ -49,7 +49,7 @@ builder.Host.UseSerilog((ctx, lc) =>
 
 var app = builder.Build();
 
-//// environment: development
+// environment: development
 //app.UseDeveloperExceptionPage();
 
 // environment: production
@@ -63,10 +63,11 @@ if (!app.Environment.IsDevelopment())
 else
 {
     // 使用中间件来捕获异常
-    app.UseMovieShopExceptionMiddleware();
+    app.UseMovieShopExceptionMiddleware();  // 自定义中间件
+    //app.UseDeveloperExceptionPage();   
 }
 // 错误日志，保存在 Logs 文件夹里
-//app.UseMiddleware<MovieShopMVC.Middlewares.LoggingMiddleware>(); // 手写的错误日志 middleware
+//app.UseMiddleware<MovieShopMVC.Middlewares.LoggingMiddleware>(); // 自定义错误日志中间件
 app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();

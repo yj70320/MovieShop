@@ -12,6 +12,7 @@ C:\Users\YJ\Desktop\HW_done\MovieShop\ApplicationCore\obj\Debug\net8.0\ref\Appli
 C:\Users\YJ\Desktop\MovieShop\ApplicationCore\bin\Debug\net8.0\ApplicationCore.deps.json
 C:\Users\YJ\Desktop\MovieShop\ApplicationCore\bin\Debug\net8.0\ApplicationCore.dll
 C:\Users\YJ\Desktop\MovieShop\ApplicationCore\bin\Debug\net8.0\ApplicationCore.pdb
+C:\Users\YJ\Desktop\MovieShop\ApplicationCore\obj\Debug\net8.0\ApplicationCore.csproj.AssemblyReference.cache
 C:\Users\YJ\Desktop\MovieShop\ApplicationCore\obj\Debug\net8.0\ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\YJ\Desktop\MovieShop\ApplicationCore\obj\Debug\net8.0\ApplicationCore.AssemblyInfoInputs.cache
 C:\Users\YJ\Desktop\MovieShop\ApplicationCore\obj\Debug\net8.0\ApplicationCore.AssemblyInfo.cs
@@ -21,4 +22,3 @@ C:\Users\YJ\Desktop\MovieShop\ApplicationCore\obj\Debug\net8.0\ApplicationCore.d
 C:\Users\YJ\Desktop\MovieShop\ApplicationCore\obj\Debug\net8.0\refint\ApplicationCore.dll
 C:\Users\YJ\Desktop\MovieShop\ApplicationCore\obj\Debug\net8.0\ApplicationCore.pdb
 C:\Users\YJ\Desktop\MovieShop\ApplicationCore\obj\Debug\net8.0\ref\ApplicationCore.dll
-C:\Users\YJ\Desktop\MovieShop\ApplicationCore\obj\Debug\net8.0\ApplicationCore.csproj.AssemblyReference.cache

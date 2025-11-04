@@ -23,8 +23,10 @@ namespace MovieShopMVC.Controllers
 
         [HttpPost] // 处理表单数据，验证用户名和密码
         public async Task<IActionResult> Login(LoginModel model) {
+            if (!ModelState.IsValid) return View(model);
 
             var user = await _accountService.ValidateUser(model.Email, model.Password);
+
 
             // Claim 是一条关于用户的“声明信息”，例如用户名、邮箱、角色、权限等。
             // 它被用在 认证 Authentication 和 授权 Authorization 里，用来描述用户是谁、能做什么。
@@ -43,10 +45,12 @@ namespace MovieShopMVC.Controllers
             var claimIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
             await HttpContext.SignInAsync(
                 CookieAuthenticationDefaults.AuthenticationScheme,
-                new ClaimsPrincipal(claimIdentity));
+                new ClaimsPrincipal(claimIdentity)
+            );
 
             // 登录后跳转回主页
-            return LocalRedirect("~/"); 
+            return LocalRedirect("~/");
+            //return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
@@ -68,8 +72,8 @@ namespace MovieShopMVC.Controllers
         [HttpGet]
         public async Task<IActionResult> Logout()
         {
-            await HttpContext.SignOutAsync();
-
+            //await HttpContext.SignOutAsync();
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             // 登出后跳转回主页
             return LocalRedirect("~/");
         }
