@@ -1,0 +1,214 @@
+2025-11-06 10:00:17.922 -06:00 [INF] User profile is available. Using 'C:\Users\YJ\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-06 10:00:18.098 -06:00 [INF] Now listening on: https://localhost:7145
+2025-11-06 10:00:18.099 -06:00 [INF] Now listening on: http://localhost:5073
+2025-11-06 10:00:18.156 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-06 10:00:18.157 -06:00 [INF] Hosting environment: Production
+2025-11-06 10:00:18.157 -06:00 [INF] Content root path: C:\Users\YJ\Desktop\MovieShop\MovieShopMVC
+2025-11-06 10:00:18.283 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/ - null null
+2025-11-06 10:00:18.370 -06:00 [INF] Executing endpoint 'MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC)'
+2025-11-06 10:00:18.398 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller MovieShopMVC.Controllers.HomeController (MovieShopMVC).
+2025-11-06 10:00:19.489 -06:00 [INF] Executed DbCommand (87ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [m].[Id], [m].[BackdropUrl], [m].[Budget], [m].[CreatedBy], [m].[CreatedDate], [m].[ImdbUrl], [m].[OriginalLanguage], [m].[Overview], [m].[PosterUrl], [m].[Price], [m].[ReleaseDate], [m].[Revenue], [m].[Runtime], [m].[Tagline], [m].[Title], [m].[TmdbUrl], [m].[UpdatedBy], [m].[UpdatedDate]
+FROM [Movie] AS [m]
+ORDER BY [m].[Revenue] DESC
+2025-11-06 10:00:19.578 -06:00 [INF] Executing ViewResult, running view Index.
+2025-11-06 10:00:19.699 -06:00 [INF] Executed ViewResult - view Index executed in 122.5358ms.
+2025-11-06 10:00:19.703 -06:00 [INF] Executed action MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC) in 1302.3672ms
+2025-11-06 10:00:19.704 -06:00 [INF] Executed endpoint 'MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC)'
+2025-11-06 10:00:19.709 -06:00 [INF] HTTP GET / responded 200 in 1358.0262 ms
+2025-11-06 10:00:19.721 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/MovieShopMVC.styles.css - null null
+2025-11-06 10:00:19.721 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-11-06 10:00:19.722 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/ - 200 null text/html; charset=utf-8 1445.9142ms
+2025-11-06 10:00:19.728 -06:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2025-11-06 10:00:19.726 -06:00 [INF] HTTP GET /MovieShopMVC.styles.css responded 404 in 2.7079 ms
+2025-11-06 10:00:19.721 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - null null
+2025-11-06 10:00:19.729 -06:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 304 in 3.7618 ms
+2025-11-06 10:00:19.738 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_vs/browserLink - null null
+2025-11-06 10:00:19.737 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/lib/jquery/dist/jquery.min.js - null null
+2025-11-06 10:00:19.738 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-06 10:00:19.752 -06:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2025-11-06 10:00:19.743 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/lib/bootstrap/dist/css/bootstrap.min.css - 304 null text/css 22.6702ms
+2025-11-06 10:00:19.739 -06:00 [INF] The file /css/site.css was not modified
+2025-11-06 10:00:19.758 -06:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 304 in 5.7979 ms
+2025-11-06 10:00:19.738 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2025-11-06 10:00:19.730 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/MovieShopMVC.styles.css - 404 0 null 9.5471ms
+2025-11-06 10:00:19.737 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-11-06 10:00:19.769 -06:00 [INF] HTTP GET /css/site.css responded 304 in 31.5289 ms
+2025-11-06 10:00:19.770 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/lib/jquery/dist/jquery.min.js - 304 null text/javascript 33.0772ms
+2025-11-06 10:00:19.778 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0 - 304 null text/css 57.0721ms
+2025-11-06 10:00:19.772 -06:00 [INF] The file /js/site.js was not modified
+2025-11-06 10:00:19.774 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7145/MovieShopMVC.styles.css, Response status code: 404
+2025-11-06 10:00:19.783 -06:00 [INF] HTTP GET /js/site.js responded 304 in 11.1580 ms
+2025-11-06 10:00:19.776 -06:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2025-11-06 10:00:19.769 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 31.5947ms
+2025-11-06 10:00:19.788 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 304 null text/javascript 49.9289ms
+2025-11-06 10:00:19.788 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.0949ms
+2025-11-06 10:00:19.788 -06:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 304 in 12.1401 ms
+2025-11-06 10:00:19.795 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 304 null text/javascript 58.1332ms
+2025-11-06 10:07:11.955 -06:00 [INF] User profile is available. Using 'C:\Users\YJ\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-06 10:07:12.095 -06:00 [INF] Now listening on: https://localhost:7145
+2025-11-06 10:07:12.097 -06:00 [INF] Now listening on: http://localhost:5073
+2025-11-06 10:07:12.148 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-06 10:07:12.151 -06:00 [INF] Hosting environment: Production
+2025-11-06 10:07:12.152 -06:00 [INF] Content root path: C:\Users\YJ\Desktop\MovieShop\MovieShopMVC
+2025-11-06 10:07:12.417 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/ - null null
+2025-11-06 10:07:12.502 -06:00 [INF] Executing endpoint 'MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC)'
+2025-11-06 10:07:12.527 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller MovieShopMVC.Controllers.HomeController (MovieShopMVC).
+2025-11-06 10:07:13.369 -06:00 [INF] Executed DbCommand (77ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [m].[Id], [m].[BackdropUrl], [m].[Budget], [m].[CreatedBy], [m].[CreatedDate], [m].[ImdbUrl], [m].[OriginalLanguage], [m].[Overview], [m].[PosterUrl], [m].[Price], [m].[ReleaseDate], [m].[Revenue], [m].[Runtime], [m].[Tagline], [m].[Title], [m].[TmdbUrl], [m].[UpdatedBy], [m].[UpdatedDate]
+FROM [Movie] AS [m]
+ORDER BY [m].[Revenue] DESC
+2025-11-06 10:07:13.446 -06:00 [INF] Executing ViewResult, running view Index.
+2025-11-06 10:07:13.512 -06:00 [INF] Executed ViewResult - view Index executed in 66.2711ms.
+2025-11-06 10:07:13.515 -06:00 [INF] Executed action MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC) in 986.142ms
+2025-11-06 10:07:13.516 -06:00 [INF] Executed endpoint 'MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC)'
+2025-11-06 10:07:13.519 -06:00 [INF] HTTP GET / responded 200 in 1035.2178 ms
+2025-11-06 10:07:13.528 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/ - 200 null text/html; charset=utf-8 1116.7001ms
+2025-11-06 10:07:13.532 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/MovieShopMVC.styles.css - null null
+2025-11-06 10:07:13.537 -06:00 [INF] HTTP GET /MovieShopMVC.styles.css responded 404 in 2.6606 ms
+2025-11-06 10:07:13.538 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/MovieShopMVC.styles.css - 404 0 null 6.2026ms
+2025-11-06 10:07:13.540 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7145/MovieShopMVC.styles.css, Response status code: 404
+2025-11-06 10:07:13.548 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-06 10:07:13.548 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_vs/browserLink - null null
+2025-11-06 10:07:13.555 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 6.6414ms
+2025-11-06 10:07:13.582 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.7314ms
+2025-11-06 10:07:29.419 -06:00 [INF] User profile is available. Using 'C:\Users\YJ\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-06 10:07:29.557 -06:00 [INF] Now listening on: https://localhost:7145
+2025-11-06 10:07:29.559 -06:00 [INF] Now listening on: http://localhost:5073
+2025-11-06 10:07:29.618 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-06 10:07:29.618 -06:00 [INF] Hosting environment: Production
+2025-11-06 10:07:29.619 -06:00 [INF] Content root path: C:\Users\YJ\Desktop\MovieShop\MovieShopMVC
+2025-11-06 10:07:29.857 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/ - null null
+2025-11-06 10:07:29.942 -06:00 [INF] Executing endpoint 'MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC)'
+2025-11-06 10:07:29.965 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller MovieShopMVC.Controllers.HomeController (MovieShopMVC).
+2025-11-06 10:07:30.820 -06:00 [INF] Executed DbCommand (68ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [m].[Id], [m].[BackdropUrl], [m].[Budget], [m].[CreatedBy], [m].[CreatedDate], [m].[ImdbUrl], [m].[OriginalLanguage], [m].[Overview], [m].[PosterUrl], [m].[Price], [m].[ReleaseDate], [m].[Revenue], [m].[Runtime], [m].[Tagline], [m].[Title], [m].[TmdbUrl], [m].[UpdatedBy], [m].[UpdatedDate]
+FROM [Movie] AS [m]
+ORDER BY [m].[Revenue] DESC
+2025-11-06 10:07:30.898 -06:00 [INF] Executing ViewResult, running view Index.
+2025-11-06 10:07:30.965 -06:00 [INF] Executed ViewResult - view Index executed in 67.1754ms.
+2025-11-06 10:07:30.969 -06:00 [INF] Executed action MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC) in 1001.009ms
+2025-11-06 10:07:30.971 -06:00 [INF] Executed endpoint 'MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC)'
+2025-11-06 10:07:30.975 -06:00 [INF] HTTP GET / responded 200 in 1049.2329 ms
+2025-11-06 10:07:30.985 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/MovieShopMVC.styles.css - null null
+2025-11-06 10:07:30.989 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/ - 200 null text/html; charset=utf-8 1136.9676ms
+2025-11-06 10:07:30.990 -06:00 [INF] HTTP GET /MovieShopMVC.styles.css responded 404 in 3.0981 ms
+2025-11-06 10:07:30.994 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/MovieShopMVC.styles.css - 404 0 null 8.9057ms
+2025-11-06 10:07:30.997 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7145/MovieShopMVC.styles.css, Response status code: 404
+2025-11-06 10:07:31.000 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-06 10:07:31.000 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_vs/browserLink - null null
+2025-11-06 10:07:31.007 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 6.3851ms
+2025-11-06 10:07:31.036 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.8942ms
+2025-11-06 10:16:45.624 -06:00 [INF] User profile is available. Using 'C:\Users\YJ\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-06 10:16:45.780 -06:00 [INF] Now listening on: https://localhost:7145
+2025-11-06 10:16:45.781 -06:00 [INF] Now listening on: http://localhost:5073
+2025-11-06 10:16:45.824 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-06 10:16:45.826 -06:00 [INF] Hosting environment: Production
+2025-11-06 10:16:45.827 -06:00 [INF] Content root path: C:\Users\YJ\Desktop\MovieShop\MovieShopMVC
+2025-11-06 10:16:46.190 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/ - null null
+2025-11-06 10:16:46.282 -06:00 [INF] Executing endpoint 'MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC)'
+2025-11-06 10:16:46.309 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller MovieShopMVC.Controllers.HomeController (MovieShopMVC).
+2025-11-06 10:16:47.165 -06:00 [INF] Executed DbCommand (73ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [m].[Id], [m].[BackdropUrl], [m].[Budget], [m].[CreatedBy], [m].[CreatedDate], [m].[ImdbUrl], [m].[OriginalLanguage], [m].[Overview], [m].[PosterUrl], [m].[Price], [m].[ReleaseDate], [m].[Revenue], [m].[Runtime], [m].[Tagline], [m].[Title], [m].[TmdbUrl], [m].[UpdatedBy], [m].[UpdatedDate]
+FROM [Movie] AS [m]
+ORDER BY [m].[Revenue] DESC
+2025-11-06 10:16:47.243 -06:00 [INF] Executing ViewResult, running view Index.
+2025-11-06 10:16:47.307 -06:00 [INF] Executed ViewResult - view Index executed in 63.9987ms.
+2025-11-06 10:16:47.311 -06:00 [INF] Executed action MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC) in 999.8257ms
+2025-11-06 10:16:47.312 -06:00 [INF] Executed endpoint 'MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC)'
+2025-11-06 10:16:47.315 -06:00 [INF] HTTP GET / responded 200 in 1052.6014 ms
+2025-11-06 10:16:47.326 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/ - 200 null text/html; charset=utf-8 1141.5898ms
+2025-11-06 10:16:47.328 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/MovieShopMVC.styles.css - null null
+2025-11-06 10:16:47.336 -06:00 [INF] HTTP GET /MovieShopMVC.styles.css responded 404 in 2.7203 ms
+2025-11-06 10:16:47.337 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/MovieShopMVC.styles.css - 404 0 null 9.8947ms
+2025-11-06 10:16:47.340 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7145/MovieShopMVC.styles.css, Response status code: 404
+2025-11-06 10:16:47.342 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-06 10:16:47.342 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_vs/browserLink - null null
+2025-11-06 10:16:47.353 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 11.3084ms
+2025-11-06 10:16:47.387 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.3395ms
+2025-11-06 10:16:49.124 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/Account/Login - null null
+2025-11-06 10:16:49.132 -06:00 [INF] Executing endpoint 'MovieShopMVC.Controllers.AccountController.Login (MovieShopMVC)'
+2025-11-06 10:16:49.136 -06:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login() on controller MovieShopMVC.Controllers.AccountController (MovieShopMVC).
+2025-11-06 10:16:49.140 -06:00 [INF] Executing ViewResult, running view Login.
+2025-11-06 10:16:49.167 -06:00 [INF] Executed ViewResult - view Login executed in 27.8522ms.
+2025-11-06 10:16:49.168 -06:00 [INF] Executed action MovieShopMVC.Controllers.AccountController.Login (MovieShopMVC) in 30.57ms
+2025-11-06 10:16:49.169 -06:00 [INF] Executed endpoint 'MovieShopMVC.Controllers.AccountController.Login (MovieShopMVC)'
+2025-11-06 10:16:49.170 -06:00 [INF] HTTP GET /Account/Login responded 200 in 40.5641 ms
+2025-11-06 10:16:49.172 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/Account/Login - 200 null text/html; charset=utf-8 47.761ms
+2025-11-06 10:16:49.192 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/MovieShopMVC.styles.css - null null
+2025-11-06 10:16:49.193 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-06 10:16:49.193 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2025-11-06 10:16:49.200 -06:00 [INF] HTTP GET /MovieShopMVC.styles.css responded 404 in 1.4771 ms
+2025-11-06 10:16:49.202 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 8.4134ms
+2025-11-06 10:16:49.193 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_vs/browserLink - null null
+2025-11-06 10:16:49.192 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2025-11-06 10:16:49.207 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/MovieShopMVC.styles.css - 404 0 null 15.3468ms
+2025-11-06 10:16:49.209 -06:00 [INF] The file /lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js was not modified
+2025-11-06 10:16:49.217 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7145/MovieShopMVC.styles.css, Response status code: 404
+2025-11-06 10:16:49.218 -06:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js responded 304 in 12.0150 ms
+2025-11-06 10:16:49.215 -06:00 [INF] The file /lib/jquery-validation/dist/jquery.validate.min.js was not modified
+2025-11-06 10:16:49.220 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 304 null text/javascript 27.4805ms
+2025-11-06 10:16:49.221 -06:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js responded 304 in 6.0494 ms
+2025-11-06 10:16:49.225 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.0266ms
+2025-11-06 10:16:49.226 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/lib/jquery-validation/dist/jquery.validate.min.js - 304 null text/javascript 33.7643ms
+2025-11-06 10:16:51.994 -06:00 [INF] Request starting HTTP/2 POST https://localhost:7145/Account/Login - application/x-www-form-urlencoded 223
+2025-11-06 10:16:51.998 -06:00 [INF] Executing endpoint 'MovieShopMVC.Controllers.AccountController.Login (MovieShopMVC)'
+2025-11-06 10:16:52.005 -06:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ApplicationCore.Models.LoginModel) on controller MovieShopMVC.Controllers.AccountController (MovieShopMVC).
+2025-11-06 10:16:52.073 -06:00 [INF] Executed DbCommand (26ms) [Parameters=[@__email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[DateOfBirth], [u].[Email], [u].[FirstName], [u].[HashedPassword], [u].[IsLocked], [u].[LastLoginDateTime], [u].[LastName], [u].[LockoutEndDate], [u].[PhoneNumber], [u].[Salt], [u].[TwoFactorEnabled]
+FROM [User] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-11-06 10:16:52.119 -06:00 [INF] AuthenticationScheme: Cookies signed in.
+2025-11-06 10:16:52.120 -06:00 [INF] Executing LocalRedirectResult, redirecting to /.
+2025-11-06 10:16:52.121 -06:00 [INF] Executed action MovieShopMVC.Controllers.AccountController.Login (MovieShopMVC) in 114.4409ms
+2025-11-06 10:16:52.122 -06:00 [INF] Executed endpoint 'MovieShopMVC.Controllers.AccountController.Login (MovieShopMVC)'
+2025-11-06 10:16:52.123 -06:00 [INF] HTTP POST /Account/Login responded 302 in 125.3893 ms
+2025-11-06 10:16:52.124 -06:00 [INF] Request finished HTTP/2 POST https://localhost:7145/Account/Login - 302 0 null 129.9441ms
+2025-11-06 10:16:52.129 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/ - null null
+2025-11-06 10:16:52.134 -06:00 [INF] Executing endpoint 'MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC)'
+2025-11-06 10:16:52.135 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller MovieShopMVC.Controllers.HomeController (MovieShopMVC).
+2025-11-06 10:16:52.223 -06:00 [INF] Executed DbCommand (48ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [m].[Id], [m].[BackdropUrl], [m].[Budget], [m].[CreatedBy], [m].[CreatedDate], [m].[ImdbUrl], [m].[OriginalLanguage], [m].[Overview], [m].[PosterUrl], [m].[Price], [m].[ReleaseDate], [m].[Revenue], [m].[Runtime], [m].[Tagline], [m].[Title], [m].[TmdbUrl], [m].[UpdatedBy], [m].[UpdatedDate]
+FROM [Movie] AS [m]
+ORDER BY [m].[Revenue] DESC
+2025-11-06 10:16:52.228 -06:00 [INF] Executing ViewResult, running view Index.
+2025-11-06 10:16:52.234 -06:00 [INF] Executed ViewResult - view Index executed in 6.5808ms.
+2025-11-06 10:16:52.235 -06:00 [INF] Executed action MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC) in 99.7412ms
+2025-11-06 10:16:52.236 -06:00 [INF] Executed endpoint 'MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC)'
+2025-11-06 10:16:52.237 -06:00 [INF] HTTP GET / responded 200 in 104.4247 ms
+2025-11-06 10:16:52.238 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/ - 200 null text/html; charset=utf-8 108.639ms
+2025-11-06 10:16:52.258 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/MovieShopMVC.styles.css - null null
+2025-11-06 10:16:52.258 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-06 10:16:52.258 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_vs/browserLink - null null
+2025-11-06 10:16:52.261 -06:00 [INF] HTTP GET /MovieShopMVC.styles.css responded 404 in 0.3772 ms
+2025-11-06 10:16:52.263 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 4.2883ms
+2025-11-06 10:16:52.265 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/MovieShopMVC.styles.css - 404 0 null 7.3838ms
+2025-11-06 10:16:52.272 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.3992ms
+2025-11-06 10:16:52.273 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7145/MovieShopMVC.styles.css, Response status code: 404
+2025-11-06 10:49:34.506 -06:00 [INF] User profile is available. Using 'C:\Users\YJ\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-06 10:49:34.640 -06:00 [INF] Now listening on: https://localhost:7145
+2025-11-06 10:49:34.642 -06:00 [INF] Now listening on: http://localhost:5073
+2025-11-06 10:49:34.694 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-06 10:49:34.694 -06:00 [INF] Hosting environment: Production
+2025-11-06 10:49:34.695 -06:00 [INF] Content root path: C:\Users\YJ\Desktop\MovieShop\MovieShopMVC
+2025-11-06 10:49:34.856 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/ - null null
+2025-11-06 10:49:34.941 -06:00 [INF] Executing endpoint 'MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC)'
+2025-11-06 10:49:34.964 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller MovieShopMVC.Controllers.HomeController (MovieShopMVC).
+2025-11-06 10:49:35.795 -06:00 [INF] Executed DbCommand (70ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(@__p_0) [m].[Id], [m].[BackdropUrl], [m].[Budget], [m].[CreatedBy], [m].[CreatedDate], [m].[ImdbUrl], [m].[OriginalLanguage], [m].[Overview], [m].[PosterUrl], [m].[Price], [m].[ReleaseDate], [m].[Revenue], [m].[Runtime], [m].[Tagline], [m].[Title], [m].[TmdbUrl], [m].[UpdatedBy], [m].[UpdatedDate]
+FROM [Movie] AS [m]
+ORDER BY [m].[Revenue] DESC
+2025-11-06 10:49:35.873 -06:00 [INF] Executing ViewResult, running view Index.
+2025-11-06 10:49:35.934 -06:00 [INF] Executed ViewResult - view Index executed in 61.9433ms.
+2025-11-06 10:49:35.937 -06:00 [INF] Executed action MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC) in 971.9524ms
+2025-11-06 10:49:35.939 -06:00 [INF] Executed endpoint 'MovieShopMVC.Controllers.HomeController.Index (MovieShopMVC)'
+2025-11-06 10:49:35.941 -06:00 [INF] HTTP GET / responded 200 in 1023.3272 ms
+2025-11-06 10:49:35.949 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/MovieShopMVC.styles.css - null null
+2025-11-06 10:49:35.953 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/ - 200 null text/html; charset=utf-8 1102.4504ms
+2025-11-06 10:49:35.956 -06:00 [INF] HTTP GET /MovieShopMVC.styles.css responded 404 in 3.0053 ms
+2025-11-06 10:49:35.957 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/MovieShopMVC.styles.css - 404 0 null 8.1445ms
+2025-11-06 10:49:35.960 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7145/MovieShopMVC.styles.css, Response status code: 404
+2025-11-06 10:49:35.966 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-06 10:49:35.966 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7145/_vs/browserLink - null null
+2025-11-06 10:49:35.972 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 6.511ms
+2025-11-06 10:49:36.001 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7145/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.7422ms
