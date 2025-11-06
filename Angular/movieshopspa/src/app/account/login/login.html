@@ -1,0 +1,25 @@
+<!-- <p>login works!</p> -->
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <h4>Login</h4>
+            <!-- 动态显示错误信息，invalidLogin 为 true 时显示 -->
+            <div *ngIf="invalidLogin" class="alert alert-danger">
+                Please check your email and password.
+            </div>
+
+            <!-- Login Form -->
+            <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="email1">Email address</label>
+                <input type="email" class="form-control" id="email1" name="email" [(ngModel)]="loginModel.email">
+            </div>
+
+            <div class="form-group">
+                <label for="password1">Password</label>
+                <input type="password" class="form-control" id="password1" name="password" [(ngModel)]="loginModel.password">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<!-- <p>header works!</p> -->
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand">MovieShopSPA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <!-- 导航左侧，始终显示 -->
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" [routerLink]="['']">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark">Privacy</a>
+                    </li>
+                </ul>
+
+                <!-- 登录前显示登录和注册按钮 -->
+                <div class="text-end d-flex justify-content-end gap-2" *ngIf="!isUserLoggedIn">
+                    <a class="btn btn-outline-primary" [routerLink]="['/account/login']">Login</a>
+                    <a class="btn btn-outline-primary" [routerLink]="['/account/register']">Register</a>
+                </div>
+
+                <!-- 登录后显示用户信息和登出按钮 -->
+                <div class="text-end d-flex justify-content-end gap-4" *ngIf="isUserLoggedIn">
+                    {{ currentUser.family_name + ', ' + currentUser.given_name}}
+                    <a class="btn btn-outline-primary" (click)="logout()">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
